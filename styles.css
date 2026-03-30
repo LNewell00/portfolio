@@ -1,4 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #0f0f0f;
@@ -7,45 +8,83 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: flex-start;
+    padding: 0;
 }
+
+nav {
+    width: 100%;
+    background: #0f0f0f;
+    border-bottom: 1px solid #222;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    min-height: 0;
+}
+
+/* index.php uses this to vertically center its content */
+.centered {
+    justify-content: center;
+    flex: 1;
+}
+
 h1 {
     font-size: 2.5rem;
     color: #ffffff;
 }
+
 h2 {
     font-size: 1.1rem;
     color: #888;
     font-weight: 400;
     margin-top: 0.5rem;
 }
+
 .divider {
     width: 40px;
     height: 3px;
     background: #4f8ef7;
     margin: 2rem auto;
 }
+
 section {
     max-width: 640px;
     width: 100%;
     margin-bottom: 2rem;
 }
+
 section h3 {
-    color: #4f8ef7; margin-bottom:
-    0.5rem; font-size: 0.85rem;
+    color: #4f8ef7;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+
 p, li {
-    line-height: 1.7; color: #bbb;
+    line-height: 1.7;
+    color: #bbb;
 }
+
 ul {
     padding-left: 1.2rem;
 }
+
 a {
-    color: #4f8ef7; text-decoration: none;
+    color: #4f8ef7;
+    text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
