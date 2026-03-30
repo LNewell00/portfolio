@@ -1,0 +1,89 @@
+<?php
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASSWORD');
+$dsn = "pgsql:host=$host;port=5432;dbname=$db";
+try {
+    $pdo = new PDO($dsn, $user, $pass, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]);
+} catch (PDOException $e) {
+    die($e->getMessage());
+}
+
+$stmt = $pdo->query("SELECT current_database()");
+$row = $stmt->fetch();
+echo $row[0];
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Logan Newell</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a href="sql.html">SQL Statement</a>
+
+<h1>Logan Newell</h1>
+<h2>Student Intern</h2>
+<div class="divider"></div>
+
+<section>
+    <h3><?php echo "ABOUT" ?></h3>
+    <p>I love learning new things and building cool stuff. I love working with docker and linux.
+        I'm also a student at the University of Arkansas Fort Smith studying Computer Science.
+        I will be graduating in December of 2026 and activily seeking opportunities to apply my skills.
+        I'm hoping in the future to continue my education by pursuing a Master's degree in Computer Science.
+        Based in Fort Smith, Arkansas.</p>
+</section>
+
+<section>
+    <h3>Experience</h3>
+    <ul>
+        <li><strong>Information Center, Intern</strong> at ArcBest Technologies (2024 - Present)</li>
+        <ul>
+            <li>Assisted with deployment of various desktops, laptops, and zebra devices</li>
+            <li>Provide technical support with Navori Digital Signage devices</li>
+            <li>Assisted with researching new digital signage services</li>
+            <li>Provision Sim Cards</li>
+            <li>Manage lost and stolen zebra devices</li>
+            <li>Assist with device inventory cleaning and mismatched devices</li>
+        </ul>
+        <li><strong>Chartwells Cook</strong> at University of Arkansas (2023-2024)</li>
+        <li><strong>Student Worker</strong> at College of the Ozarks (2022-2023)</li>
+        <ul>
+            <li>Worked under the supervision of Chef Angie</li>
+            <li>Trained in food preparation as a line cook, prep and banquets chef, as well as baking</li>
+            <li>Gained experience working as a French-Style server for banquets and catering.</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>Projects</h3>
+    <ul>
+        <li><strong>Home Lab</strong> — Self-hosted services on Ubuntu Server with Cloudflare Tunnel</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Skills</h3>
+    <ul>
+        <li>PHP, SQL</li>
+        <li>Docker, Linux</li>
+        <li>Cloudflare, Networking</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Contact</h3>
+    <p><a href="mailto:logan@thenewells.net">logan@thenewells.net</a> &nbsp;·&nbsp; <a href="https://github.com/lnewell00">GitHub</a></p>
+</section>
+</body>
+</html>
+
