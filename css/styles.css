@@ -1,10 +1,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
-    background: #0f0f0f;
+    background: rgb(15 15 15 / 0.84);
     color: #e0e0e0;
     font-family: 'DM Sans', sans-serif;
     min-height: 100vh;
+    font-size: 18px;
 }
 
 /* ── NAVBAR ── */
@@ -143,7 +144,7 @@ body {
 
 .content {
     width: 100%;
-    max-width: 760px;
+    max-width: 1200px;
     padding: 1.5rem 2rem;
 }
 
@@ -257,4 +258,64 @@ a:hover { text-decoration: underline; }
     gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.visitor-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-group label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.form-group input {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    transition: border-color 0.2s;
+    height: 35px;
+}
+
+.form-group input:focus {
+    border-color: #4f8ef7;
+}
+
+.visitor-form button {
+    align-self: flex-end;
+    background: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    color: #aaa;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    height: 35px; /* match input height */
+}
+
+.visitor-form button:hover {
+    color: #fff;
+    border-color: #4f8ef7;
 }
