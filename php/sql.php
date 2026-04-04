@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: /index.php?msg=restricted');
+    exit;
+}
+
 $host = getenv('DB_HOST');
 $db   = getenv('DB_NAME');
 $user = getenv('DB_USER');
