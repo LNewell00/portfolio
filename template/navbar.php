@@ -161,6 +161,10 @@
         z-index: 999;
     }
 
+    .nav-mobile.open {
+        display: flex;
+    }
+
     .nav-mobile a {
         color: #aaa;
         text-decoration: none;
