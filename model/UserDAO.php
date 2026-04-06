@@ -32,6 +32,26 @@ class UserDAO
         ]);
     }
 
+//    public function updateUser($username, $fname, $lname, $pwd, $cpwd) {
+//
+//        if ($pwd !== $cpwd) {
+//            return false; // or throw new \InvalidArgumentException("Passwords do not match.");
+//        }
+//
+//        $Conn = $this->getConnection();
+//        if (!$Conn) return false;
+//
+//        $stmt = $Conn->prepare("UPDATE users SET username = ?,firstname = ?,lastname = ?,password = ?,lastmodified = NOW() WHERE username = ?");
+//
+//        return $stmt->execute([
+//            $username,
+//            $fname,
+//            $lname,
+//            password_hash($pwd, PASSWORD_DEFAULT),
+//            $username
+//        ]);
+//    }
+
     public function authenticateUser($username, $passwd) {
         $connection = $this->getConnection();
         if (!$connection) return null;

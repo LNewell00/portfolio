@@ -13,8 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Logan Newell Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Both should match -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 
@@ -65,6 +66,12 @@
     <h3>Projects</h3>
     <ul>
         <li><strong>Home Lab</strong> — Self-hosted services on Ubuntu Server with ZFS, Docker, and Cloudflare Tunnel</li>
+        <ul>
+            <li><strong>Grocy</strong> — Keeps track of my pantry and fridge/freezer inventory. Also store all my family's recipes! <i>Use Demo/Demo at grocy.lnewell.work to test it!</i></li>
+            <li><strong>Watchtower</strong> — Keeps all of my docker containers up to date.</li>
+            <li><strong>Postgres</strong> — Currently used to store my website data and grocy data</li>
+            <li><strong>Cloudflare Tunnel</strong> — How I keep my nas secure and allows me to use my domain!</li>
+        </ul>
         <li><strong>Portfolio Site</strong> — This site, served via Nginx in Docker with GitHub auto-pull</li>
     </ul>
 </div>
@@ -100,6 +107,7 @@
     toggle.addEventListener('click', () => mobile.classList.toggle('open'));
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>
